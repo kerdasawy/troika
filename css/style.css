@@ -1,0 +1,816 @@
+/* ============================================================================= 
+                                    Strat Global Style  
+================================================================================ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+}
+
+/* game info button on the right side */
+
+.game_info_button {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+}
+
+.game_info_button a {
+  text-decoration: none;
+}
+
+/* arrows img bottom  */
+.bottom_line_img {
+  width: 60%;
+  margin: 2em auto;
+}
+
+.bottom_line_img img {
+  width: 100%;
+}
+
+/* after end the game message */
+
+.final_step_message {
+  width: 100%;
+  max-width: 100%;
+  display: none; /*make it display: (visible) to show it on workflow after the game ended*/
+}
+
+.final_step_message h4 {
+  text-align: center;
+  font-size: 100%;
+  color: #0a785c;
+  font-weight: 500;
+}
+
+.final_step_message a {
+  text-decoration: none;
+}
+
+.final_step_message a img {
+  width: 25%;
+  max-width: 100%;
+}
+
+/* popup windo message */
+
+.modal {
+  background-color: rgba(156, 223, 206, 0.5);
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-header h5 {
+  color: darkgreen;
+}
+
+.modal-header h5 img {
+  width: 25%;
+}
+
+.modal-body p {
+  font-weight: bold;
+  font-size: 1em;
+  margin: -30px 30px -20px;
+}
+
+.modal-footer {
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.modal-footer a img {
+  display: inline-block;
+  width: 50%;
+}
+
+/* /.end global style */
+
+/* ============================================================================= 
+                                    Strat xs-screen size  
+================================================================================ */
+
+@media (max-width: 576px) {
+  /* ----------------------- Start Game Page Style ----------------- */
+  .strat_game_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .strat_game_wrapper .left_arrow_bg img {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .strat_game_wrapper .logo_bg {
+    text-align: center;
+    width: 100%;
+    margin: 10em 1em;
+  }
+
+  .strat_game_wrapper img.logo {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .strat_game_wrapper a.start_btn {
+    text-decoration: none;
+  }
+
+  .strat_game_wrapper a.start_btn img {
+    width: 70%;
+  }
+
+  .strat_game_wrapper .right_arrow_bg img {
+    width: 20%;
+    height: 40vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* /.end Start Game Page Style */
+
+  .game_info_button {
+    right: 0;
+  }
+
+  .game_info_button a img {
+    width: 4em;
+  }
+
+  .flag_example_bg {
+    margin: 1em auto 0 auto;
+    width: 80%;
+  }
+
+  .flag_example_bg img {
+    width: 100%;
+  }
+
+  .flag_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 0.5em auto;
+    padding: 0.9em;
+    width: 100%;
+    height: 25vh;
+    overflow: scroll;
+    background-color: #e1e4e4;
+  }
+
+  .flag_container .flag_img {
+    cursor: pointer;
+  }
+
+  .flag_container .flag_img img {
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  /* start text_container style */
+
+  .text_container {
+    margin-top: 0em;
+    direction: rtl;
+    text-align: center;
+  }
+
+  .text_container h4 {
+    color: #0a785c;
+  }
+
+  .text_container h1 {
+    color: #be2b34;
+  }
+
+  .text_container h1,
+  h4 {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .drag_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 2.5em;
+  }
+
+  .drag_container .drag_box {
+    position: relative;
+  }
+
+  .drag_container .drag_box span {
+    position: absolute;
+    top: -20%;
+    left: 20%;
+    display: inline-block;
+    background-color: #fff;
+    width: 60%;
+    height: 40%;
+    border-radius: 10%;
+  }
+
+  .drag_container .drag_box span.yellow {
+    top: 0%;
+    left: 15%;
+    border: 2px solid #e9ce84;
+  }
+
+  .drag_container .drag_box span.green {
+    border: 2px solid #0a785c;
+  }
+
+  .drag_container .drag_box span.red {
+    top: 0%;
+    left: 25%;
+    border: 2px solid #be2b34;
+  }
+
+  .bottom_line_img {
+    width: 50%;
+    margin: 1em auto;
+  }
+
+  .modal-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .modal-body p {
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+
+  .modal-footer a img {
+    display: inline-block;
+    width: 40%;
+  }
+
+  /* ------------------------- Start info Page Style ---------------------- */
+  .info_page_icon {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
+
+  .info_page_icon img {
+    display: inline-block;
+    width: 5em;
+  }
+
+  .info_page_bg {
+    background-image: url(../img/info_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info_page_bg .info_bg_text {
+    text-align: center;
+    width: 90%;
+  }
+
+  .info_page_bg .info_bg_text h1 {
+    color: #be2b34;
+    font-weight: bold;
+    font-size: 2em;
+  }
+
+  .info_bg_text > img {
+    display: inline-block;
+    width: 40%;
+    margin: 1em auto;
+  }
+
+  .info_page_bg .info_bg_text p {
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9em;
+    line-height: 1.7em;
+  }
+
+  .info_page_bg .info_icon_box a {
+    text-decoration: none;
+  }
+
+  .info_page_bg .info_icon_box a img {
+    display: inline-block;
+    width: 15%;
+    margin-left: 1em;
+  }
+
+  .right_arrow_bg_info_page {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+  }
+}
+
+/* /.end xs-small screen */
+
+/* ============================================================================ 
+                                    Strat sm-screen size  
+=============================================================================== */
+
+@media (min-width: 576px) {
+  /* ----------------------- Start Game Page Style ----------------- */
+  .strat_game_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .strat_game_wrapper .left_arrow_bg img {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .strat_game_wrapper .logo_bg {
+    text-align: center;
+    width: 50%;
+    margin: 5em auto;
+  }
+
+  .strat_game_wrapper img.logo {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .strat_game_wrapper a.start_btn {
+    text-decoration: none;
+  }
+
+  .strat_game_wrapper a.start_btn img {
+    width: 56%;
+  }
+
+  .strat_game_wrapper .right_arrow_bg img {
+    width: 20%;
+    height: 40vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* /.end Start Game Page Style */
+
+  /* ----------------------- Start Game Board Page Style ----------------- */
+
+  .game_info_button {
+    right: -40px;
+  }
+
+  .game_info_button a img {
+    width: 4em;
+  }
+
+  .flag_example_bg {
+    margin-top: 0.9em;
+  }
+
+  .flag_example_bg img {
+    width: 100%;
+  }
+
+  .flag_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 0.8em auto;
+    padding: 0.5em;
+    width: 100%;
+    height: 50vh;
+    overflow: scroll;
+    background-color: #e1e4e4;
+  }
+
+  .flag_container .flag_img {
+    cursor: pointer;
+  }
+
+  .flag_container .flag_img img {
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  /* start text_container style */
+
+  .text_container {
+    margin-top: 1em;
+    direction: rtl;
+    text-align: center;
+  }
+
+  .text_container h4 {
+    color: #0a785c;
+    font-weight: bold;
+    margin-bottom: -1px;
+  }
+
+  .text_container h1 {
+    color: #be2b34;
+    font-size: 300%;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .drag_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 2em;
+  }
+
+  .drag_container .drag_box {
+    position: relative;
+  }
+
+  .drag_container .drag_box span {
+    position: absolute;
+    top: -20%;
+    left: 20%;
+    display: inline-block;
+    background-color: #fff;
+    width: 60%;
+    height: 40%;
+    border-radius: 10%;
+  }
+
+  .drag_container .drag_box span.yellow {
+    top: 0%;
+    left: 15%;
+    border: 2px solid #e9ce84;
+  }
+
+  .drag_container .drag_box span.green {
+    border: 2px solid #0a785c;
+  }
+
+  .drag_container .drag_box span.red {
+    top: 0%;
+    left: 25%;
+    border: 2px solid #be2b34;
+  }
+
+  .bottom_line_img {
+    width: 50%;
+    margin: 0.5em auto;
+  }
+
+  .final_step_message h4 {
+    text-align: center;
+    font-size: 70%;
+    color: #0a785c;
+    font-weight: 500;
+    margin-top: 0.7em;
+  }
+
+  .final_step_message a img {
+    width: 20%;
+    max-width: 100%;
+    margin: -0.5em auto 0 auto;
+  }
+
+  .modal-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .modal-body p {
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+
+  .modal-footer a img {
+    display: inline-block;
+    width: 40%;
+  }
+
+  /* ------------------------- Start Info Page Style ---------------------- */
+  .info_page_icon {
+    position: absolute;
+    top: 1em;
+    right: 2em;
+  }
+
+  .info_page_icon img {
+    display: inline-block;
+    width: 4em;
+  }
+
+  .info_page_bg {
+    background-image: url(../img/info_bg.png);
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info_page_bg .info_bg_text {
+    text-align: center;
+    width: 60%;
+  }
+
+  .info_page_bg .info_bg_text h1 {
+    color: #be2b34;
+    font-weight: bold;
+    font-size: 2em;
+  }
+
+  .info_bg_text > img {
+    display: inline-block;
+    width: 40%;
+    margin: 1em auto;
+  }
+
+  .info_page_bg .info_bg_text p {
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+
+  .info_page_bg .info_icon_box a {
+    text-decoration: none;
+  }
+
+  .info_page_bg .info_icon_box a img {
+    display: inline-block;
+    width: 10%;
+    margin-right: 1em;
+  }
+
+  .right_arrow_bg_info_page {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10%;
+  }
+}
+
+/* /.end sm-small screen */
+
+/* ============================================================================ 
+                                    Strat lg-screen size  
+=============================================================================== */
+
+@media (min-width: 992px) {
+  /* ----------------------- Start Game Page Style ----------------- */
+  .strat_game_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .strat_game_wrapper .left_arrow_bg img {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .strat_game_wrapper .logo_bg {
+    text-align: center;
+    width: 80%;
+    margin: 8em auto;
+  }
+
+  .strat_game_wrapper img.logo {
+    width: 100%;
+  }
+
+  .strat_game_wrapper a.start_btn {
+    text-decoration: none;
+  }
+
+  .strat_game_wrapper a.start_btn img {
+    width: 40%;
+  }
+
+  .strat_game_wrapper .right_arrow_bg img {
+    width: 20%;
+    height: 40vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* /.end Start Game Page Style */
+
+  /* ------------------------ Start Game Board Page Style -------------- */
+
+  .game_info_button a img {
+    width: 50%;
+  }
+
+  .flag_example_bg {
+    margin: 1em auto;
+    width: 70%;
+  }
+
+  .flag_example_bg img {
+    width: 100%;
+  }
+
+  .flag_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin-top: 0em;
+    padding: 1em;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background-color: #e1e4e4;
+  }
+
+  .flag_container .flag_img {
+    cursor: pointer;
+  }
+
+  .flag_container .flag_img img {
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  /* start text_container style */
+
+  .text_container {
+    margin-top: 4em;
+    direction: rtl;
+    text-align: center;
+  }
+
+  .text_container h4 {
+    color: #0a785c;
+    font-weight: bold;
+    font-size: 200%;
+  }
+
+  .text_container h1 {
+    color: #be2b34;
+    font-size: 6em;
+    font-weight: bold;
+    margin: -0.3em 0 0.2em 0;
+  }
+
+  .drag_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 7em;
+  }
+
+  .drag_container .drag_box {
+    position: relative;
+  }
+
+  .drag_container .drag_box span {
+    position: absolute;
+    top: -20%;
+    left: 20%;
+    display: inline-block;
+    background-color: #fff;
+    width: 60%;
+    height: 40%;
+    border-radius: 10%;
+  }
+
+  .drag_container .drag_box span.yellow {
+    top: 0%;
+    left: 15%;
+    border: 2px solid #e9ce84;
+  }
+
+  .drag_container .drag_box span.green {
+    border: 2px solid #0a785c;
+  }
+
+  .drag_container .drag_box span.red {
+    top: 0%;
+    left: 25%;
+    border: 2px solid #be2b34;
+  }
+
+  .final_step_message h4 {
+    text-align: center;
+    font-size: 100%;
+    color: #0a785c;
+    font-weight: 500;
+    margin-top: 0.7em;
+  }
+
+  .final_step_message a img {
+    width: 30%;
+    max-width: 100%;
+    margin: 1em auto 0 auto;
+  }
+
+  .modal-footer a img {
+    display: inline-block;
+    width: 50%;
+  }
+
+  /* ------------------------- Start info Page Style ---------------------- */
+  .info_page_icon {
+    position: absolute;
+    top: 0;
+    right: 4em;
+  }
+
+  .info_page_icon img {
+    display: inline-block;
+    width: 10em;
+  }
+
+  .info_page_bg {
+    background-image: url(../img/info_bg.png);
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info_page_bg .info_bg_text {
+    text-align: center;
+    width: 50%;
+    align-items: center;
+  }
+
+  .info_page_bg .info_bg_text h1 {
+    color: #be2b34;
+    font-weight: bold;
+    font-size: 3.5em;
+  }
+
+  .info_bg_text > img {
+    display: inline-block;
+    width: 40%;
+    margin: 1em auto;
+  }
+
+  .info_page_bg .info_bg_text p {
+    color: #333;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1.8em;
+  }
+
+  .info_page_bg .info_icon_box a {
+    text-decoration: none;
+  }
+
+  .info_page_bg .info_icon_box a img {
+    display: inline-block;
+    width: 10%;
+    margin-right: 1em;
+  }
+
+  .right_arrow_bg_info_page {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10%;
+  }
+
+  /* /.end game board style */
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .game_info_button {
+    right: -20px;
+  }
+  .flag_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 0.8em auto;
+    padding: 0.5em;
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+    background-color: #e1e4e4;
+  }
+  .drag_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 3em !important;
+  }
+}
